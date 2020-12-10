@@ -14,9 +14,7 @@ class EmailAddressParser
     end
     
     def parse
-        email_arr = @emails.split(/[," "]/)
-        email_arr.delete_if {|e| e.length == 0 }
-        email_arr.uniq
+        email_arr = @emails.split(/[," "]/).delete_if {|e| e.length == 0 }.uniq
         # binding.pry
     end
 end
